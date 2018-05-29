@@ -7,7 +7,7 @@ class School
   attr_reader :roster
   
   def add_student(student_name, grade)
-    @roster[grade] = [] if 
+    @roster[grade] = [] if !@roster.has_key?(grade)
     @roster[grade] << student_name
   end
   
